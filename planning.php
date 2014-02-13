@@ -17,12 +17,13 @@ else //Tout va bien
 {
   echo $_SESSION['login']."<br/>";
   foreach($stmt as $plan){
-    echo $plan[2]."h : ".$plan[1]."<br/>";
+	echo "DATE : ".$plan[3]." :<br/>";
+    echo $plan[2]."h : ".$plan[1]."<br/><br/>";
   }     
 }
 
 ?>
 
-<form action="affichage.php" method="POST">
+<form action="suite.php" method="POST">
 <input type='submit' value='retour'>
 </form>

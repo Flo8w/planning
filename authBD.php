@@ -1,6 +1,7 @@
 <?php
 require_once("config.php");
 
+    
 $errorMessage='';
 
 //Test de l'envoi du formulaire
@@ -23,8 +24,8 @@ if(!empty($_POST))
 		{
 			//On ouvre la session
 			session_start();
-			
 			//On enregistre le login en variable de session
+			$_SESSION['password']=$_POST['password'];
 			$_SESSION['login']=$_POST['login'];
 			//On redirige vers le fichier suite.php
 			header('Location: suite.php');
@@ -63,7 +64,7 @@ else
 <input type="submit" name="submit" value="Se logger"/>
 </p>
 
-<input type="button" name="Ajouter" value="Ajouter une personne" onclick="self.location.href='ajout.php'"/>
+<input type="button" name="Ajouter" value="S'inscrire" onclick="self.location.href='ajout.php'"/>
  </fieldset>
 </form>
 </body>

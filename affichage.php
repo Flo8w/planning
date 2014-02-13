@@ -32,6 +32,7 @@ if(!empty($_POST))
 <html lang="fr">
   <head>
     <title> Affichage </title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
 <?php
@@ -42,7 +43,7 @@ if(!empty($_POST))
 ?>
 
   <body>
-    <form action="affichage.php" method="post">
+    <form action="affichage.php" method="post" name="formu">
       <fieldset>
 	<legend> Planning </legend>
 
